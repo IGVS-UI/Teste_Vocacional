@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teste Vocacional</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style/style.css?v=4">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="logo-title">
+        <img src="../img/interrogacao.svg" alt="" class="icon-interrogacao">
+        <h1>TESTE VOCACIONAL</h1>
+      </div>
+      <h2>Descubra a área de atuação que mais combina com você</h2>
+    </header>
+
+    <div class="progress-section">
+      <div class="progress-bar-bg"><div class="progress-bar-fill" id="barra" style="width: 0%;"></div></div>
+      <span class="progress-text" id="progresso">0%</span>
+    </div>
+    <p class="etapa" id="etapa" aria-live="polite"></p>
+
+    <main class="questions-list" id="lista"></main>
+    <p class="aviso" id="aviso" role="alert"></p>
+
+    <footer class="footer-buttons">
+      <button class="btn btn-voltar" id="voltar">&larr; VOLTAR</button>
+      <button class="btn btn-proximo" id="proximo">PRÓXIMO &rarr;</button>
+    </footer>
+  </div>
+
+  <script src="../js/quiz-data.js?v=4"></script>
+  <script src="../js/quiz-rapido-data.js?v=4"></script>
+  <script src="../js/quiz.js?v=4"></script>
+  <script>iniciarPerguntas();</script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Teste Vocacional – Resultado</title>
+  <meta name="description" content="Resultado do teste vocacional: sua área de afinidade, possibilidades de atuação e ETECs onde estudar.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style/resultado.css?v=4">
+</head>
+<body>
+  <header class="topo">
+    <img class="topo__icone" src="../img/interrogacao.svg" alt="">
+    <h1 class="topo__marca">TESTE VOCACIONAL</h1>
+  </header>
+
+  <main id="principal">
+    <!-- Resultado ausente ou inválido -->
+    <section class="erro" id="erro" hidden>
+      <h2>Não encontramos o seu resultado</h2>
+      <p>Para ver a sua área de afinidade, responda ao teste vocacional até o final.</p>
+      <a class="btn" href="../index.html">Fazer o teste</a>
+    </section>
+
+    <div id="resultado" hidden>
+      <section class="faixa" aria-labelledby="area-nome">
+        <p class="faixa__label" id="area-rotulo">A área de atuação mais compatível com você é:</p>
+        <h2 class="faixa__area" id="area-nome"></h2>
+        <nav class="outras" id="outras" aria-label="Outras áreas com afinidade" hidden>
+          <span class="outras__titulo">Áreas com mais afinidade:</span>
+          <ul class="outras__lista" id="outras-lista"></ul>
+        </nav>
+      </section>
+
+      <div class="conteudo">
+        <section class="bloco">
+          <h3>Do que se trata esse curso?</h3>
+          <p id="explicacao"></p>
+        </section>
+      </div>
+
+      <figure class="imagem" id="imagem">
+        <img id="imagem-img" alt="" width="256" height="256">
+      </figure>
+
+      <div class="conteudo">
+        <section class="bloco">
+          <h3>Áreas de Atuação:</h3>
+          <ul class="atuacao" id="atuacao"></ul>
+        </section>
+
+        <section class="bloco">
+          <h3>Faixa Salarial:</h3>
+          <ul class="salario" id="salario"></ul>
+          <p class="nota" id="aviso-salario"></p>
+        </section>
+
+        <section class="bloco" aria-labelledby="etecs-titulo">
+          <h3 id="etecs-titulo">ETECS disponíveis: <span class="etecs__qtd" id="etecs-qtd"></span></h3>
+          <p class="aviso aviso--destaque" id="aviso-sem-exato" hidden></p>
+          <p class="nota" id="nota-tipo"></p>
+          <ol class="etecs" id="etecs"></ol>
+          <p class="obs" id="observacao"></p>
+          <ul class="notas" id="notas"></ul>
+        </section>
+
+        <nav class="botoes" aria-label="Próximos passos">
+          <a class="btn" href="https://vestibulinho.etec.sp.gov.br" target="_blank" rel="noopener">Faça a sua inscrição</a>
+          <a class="btn btn--secundario" id="voltar-inicio" href="../index.html"><span aria-hidden="true">←</span> Voltar para a página inicial</a>
+        </nav>
+      </div>
+    </div>
+  </main>
+
+  <script src="../js/quiz-data.js?v=4"></script>
+  <script src="../js/areas-data.js?v=4"></script>
+  <script src="../js/resultado.js?v=4"></script>
+</body>
+</html>
