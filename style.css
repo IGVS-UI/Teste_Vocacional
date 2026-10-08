@@ -606,3 +606,65 @@ body {
 }
 
 }
+
+/* Tablet e celular: uma coluna, centralizada */
+@media screen and (max-width: 767px) {
+    .container {
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 16px;
+        padding: 24px 20px 0;
+    }
+
+    .ilustracao-container {
+        flex: none;
+        align-self: center;
+        width: 100%;
+        max-width: 360px;
+    }
+
+    .img-pessoa,
+    .img-interrogacao {
+        display: none;
+    }
+
+    .img-pessoa-mobile {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .box-conteudo {
+        flex: none;
+        margin-top: 0;
+        min-width: 0;
+        width: 100%;
+        max-width: 560px;
+        text-align: center;
+        padding-bottom: 32px;
+    }
+
+    .titulo {
+        font-size: clamp(2.2rem, 10vw, 4rem);
+    }
+
+    .subtitulo {
+        font-size: clamp(1rem, 3.2vw, 1.3rem);
+    }
+
+    .btn {
+        width: 100%;
+        padding: 18px 24px;
+        font-size: clamp(0.9rem, 3.4vw, 1.15rem);
+    }
+
+    .texto-rodape {
+        font-size: clamp(0.85rem, 2.8vw, 1rem);
+    }
+}
+
+/* Celulares pequenos */
+@media screen and (max-width: 374px) {
+    .container { padding: 16px 14px 0; }
+    .ilustracao-container { max-width: 240px; }
+}

@@ -199,3 +199,29 @@ body {
 .btn:hover {
   opacity: 0.9;
 }
+@media (max-width: 600px) {
+  body { padding: 20px 14px; }
+  .logo-title h1 { font-size: 18px; }
+  .header h2 { font-size: 17px; }
+  .scale-container { gap: 6px; }
+  .label.concordar, .label.discordar { font-size: 14px; margin: 0; }
+  .options { gap: 6px; }
+  .lg span { width: 34px; height: 34px; }
+  .md span { width: 28px; height: 28px; }
+  .sm span { width: 22px; height: 22px; }
+  .xs span { width: 16px; height: 16px; }
+  .footer-buttons { gap: 10px; }
+  .btn { padding: 12px 20px; }
+}
+
+@media (max-width: 360px) {
+  .lg span { width: 28px; height: 28px; }
+  .md span { width: 24px; height: 24px; }
+  .sm span { width: 20px; height: 20px; }
+  .options { gap: 4px; }
+}
+
+@media (min-width: 1024px) {
+  .container { max-width: 760px; }
+  .question-title { font-size: 16px; }
+}
